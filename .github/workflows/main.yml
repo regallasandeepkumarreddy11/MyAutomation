@@ -2,8 +2,8 @@ name: Daily Audio Processing
 
 on:
   push:
-    branches:
-      - main  # You can adjust this branch name to match your repository's default branch
+    branches-ignore:
+      - '*' # Ignore all branches, triggering on any branch
 
 jobs:
   process_audio:
