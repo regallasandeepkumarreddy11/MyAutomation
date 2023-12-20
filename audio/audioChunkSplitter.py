@@ -36,6 +36,7 @@ if __name__ == "__main__":
     inputAudioFile = r'C:\Users\SandeepRegalla\Documents\Audacity\diff.wav'  # Replace with the path to your input audio file
     outputFolder = r'C:\Users\SandeepRegalla\Documents\Audacity'  # Replace with the desired output folder
     numChunks = 4 # Replace with the number of chunks you want
+
     # Split the audio into chunks
     splitter = AudioSplitter(inputAudioFile)
     splitter.splitAudio(outputFolder, numChunks)
