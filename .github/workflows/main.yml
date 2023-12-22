@@ -1,29 +1,29 @@
-name: Daily Audio Processing
+name: Python CI
 
 on:
   push:
-    branches-ignore:
-      - '*' # Ignore all branches, triggering on any branch
+    branches:
+      - main
 
 jobs:
-  process_audio:
+  build:
+
     runs-on: windows-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: List audio files
-      run: |
-        Get-ChildItem -Path .\audio\ -Filter *.your_file_extension_here | ForEach-Object { Write-Host $_.FullName } | Out-File -Encoding utf8 -FilePath audio_files.txt
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
 
-    - name: Download audioChunkSplitter.py
+    - name: Install dependencies
       run: |
-        Invoke-WebRequest -Uri https://raw.githubusercontent.com/regallasandeepkumarreddy11/MyAutomation/master/audio/audioChunkSplitter.py -OutFile audioChunkSplitter.py
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt  # Replace with your requirements file
 
-    - name: Process audio files
+    - name: Run tests
       run: |
-        Get-Content audio_files.txt | ForEach-Object {
-          # Add the command to process each file using audioChunkSplitter.py
-          python audioChunkSplitter.py $_
-        }
+        python -m unittest discover -s tests -p '*_test.py'
