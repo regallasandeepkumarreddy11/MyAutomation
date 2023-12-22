@@ -4,10 +4,11 @@ on:
   push:
     branches:
       - master
+  schedule:
+    - cron: '0 * * * *'  # Run every hour
 
 jobs:
   build:
-
     runs-on: self-hosted
 
     steps:
@@ -18,13 +19,11 @@ jobs:
       run: |
         python -m venv venv
         .\venv\Scripts\activate
-        
-    - name: Run audioChunkSplitter.py
-      run: |
-        python ./audio/audioChunkSplitter.py  # Replace with the correct path to your script
-        
+
     - name: Install dependencies
       run: |
         pip install -r requirements.txt  # Replace with your requirements file
-        
 
+    # - name: Run audioChunkSplitter.py and write output to file
+    #   run: |
+    #     python ./audio/audioChunkSplitter.py > output.txt  # Replace with the correct path to your script and desired output file name
