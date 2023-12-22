@@ -3,12 +3,12 @@ name: Python CI
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
 
-    runs-on: DESKTOP-M9VDQ6V
+    runs-on: self-hosted
 
     steps:
     - name: Checkout repository
