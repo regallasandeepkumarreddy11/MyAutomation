@@ -8,7 +8,7 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: DESKTOP-M9VDQ6V
 
     steps:
     - name: Checkout repository
