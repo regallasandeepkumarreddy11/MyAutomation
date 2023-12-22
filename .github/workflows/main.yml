@@ -19,8 +19,12 @@ jobs:
         python -m venv venv
         .\venv\Scripts\activate
         
-
+    - name: Run audioChunkSplitter.py
+      run: |
+        python ./audio/audioChunkSplitter.py  # Replace with the correct path to your script
+        
     - name: Install dependencies
       run: |
         pip install -r requirements.txt  # Replace with your requirements file
+        
 
