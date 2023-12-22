@@ -3,21 +3,23 @@ name: Python CI
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
 
     runs-on: self-hosted
 
-
     steps:
-
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8.3
-        
     - name: Checkout repository
       uses: actions/checkout@v2
+
+    - name: Create and activate virtual environment
+      run: |
+        python -m venv venv
+        source venv/bin/activate  # On Windows, use: .\venv\Scripts\activate
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt  # Replace with your requirements file
 
