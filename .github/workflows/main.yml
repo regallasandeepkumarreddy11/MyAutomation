@@ -27,4 +27,4 @@ jobs:
     - name: Run audioChunkSplitter.py and write output to file
       run: |
         python ./audio/playAudioFile.py
-        python ./audio/audioVerification.py
+        python ./audio/audioVerify.py
