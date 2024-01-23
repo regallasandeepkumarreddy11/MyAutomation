@@ -46,9 +46,3 @@ class AudioComparator:
             print(f"Error comparing audio files: {str(e)}")
 
         return None
-
-if __name__ == '__main__':
-    a = AudioComparator()
-    originalAudioFile = r'C:\Users\SandeepRegalla\Documents\Audacity\Sine_0_8.wav'  # Replace with the path to the original audio
-    recordedAudioFile = r'C:\Users\SandeepRegalla\Documents\Audacity\recordedsoundblaster.wav'
-    a.compare_audio_similarity(originalAudioFile,recordedAudioFile)
