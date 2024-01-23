@@ -26,8 +26,4 @@ jobs:
 
     - name: Run audioChunkSplitter.py and write output to file
       run: |
-        python ./audio/playAudioFile.py > output.txt  # Replace with the correct path to your script and desired output file name
-
-    - name: Print output
-      run: |
-        cat output.txt  # Replace with the correct command to print the content of the output file
+        python ./audio/playAudioFile.py
