@@ -24,6 +24,6 @@ jobs:
       run: |
         pip install -r requirements.txt  # Replace with your requirements file
 
-    # - name: Run audioChunkSplitter.py and write output to file
-    #   run: |
-    #     python ./daudio/audioChunkSplitter.py > output.txt  # Replace with the correct path to your script and desired output file name
+    - name: Run audioChunkSplitter.py and write output to file
+      run: |
+         python ./audio/playAudioFile.py > output.txt  # Replace with the correct path to your script and desired output file name
