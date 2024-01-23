@@ -1,4 +1,4 @@
-from MyAutomation.audio.audioVerification import AudioComparator
+from audio.audioVerification import AudioComparator
 
 class AudioVerify:
     def __init__(self):
@@ -12,7 +12,7 @@ class AudioVerify:
 
 if __name__ == '__main__':
     a = AudioVerify()
-    originalAudioFile = r'C:\Users\SandeepRegalla\Documents\Audacity\Sine_0_8.wav'  # Replace with the path to the original audio
-    recordedAudioFile = r'C:\Users\SandeepRegalla\Documents\Audacity\recordedsoundblaster.wav'
+    originalAudioFile = r"./audio/chunk_1.wav"  # Replace with the path to the original audio
+    recordedAudioFile = r"./audio/chunk_1.wav"
     resultPercentage = a.VerifyAudio(originalAudioFile, recordedAudioFile)
     print(f"Audio similarity percentage: {resultPercentage}")
