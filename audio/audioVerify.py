@@ -1,4 +1,4 @@
-from audio.audioVerification import AudioComparator
+from audioVerification import AudioComparator
 
 class AudioVerify:
     def __init__(self):
