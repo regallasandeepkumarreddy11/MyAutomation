@@ -36,7 +36,7 @@ class AudioManager:
             pygame.mixer.quit()
 
 if __name__ == "__main__":
-    wav_file_path = r"C:\Users\SandeepRegalla\Documents\Audacity\chunk_1.wav"
+    wav_file_path = r"./audio/chunk_1.wav"
     duration_to_play = 4 # Specify the duration in seconds
 
     if os.path.exists(wav_file_path):
