@@ -22,7 +22,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        C:\Python38\Scripts\pip install -r C:\MyAutomation\requirements.txt  # Replace with your requirements file
+        C:\Python311\Scripts\pip install -r C:\MyAutomation\requirements.txt  # Replace with your requirements file
 
     - name: Run audioChunkSplitter.py and write output to file
       run: |
