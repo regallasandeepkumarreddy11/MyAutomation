@@ -17,14 +17,16 @@ jobs:
 
     - name: Create and activate virtual environment
       run: |
-        python -m venv venv
+        C:\Python311\python -m venv venv
         .\venv\Scripts\activate
 
     - name: Install dependencies
       run: |
-        pip install -r requirements.txt  # Replace with your requirements file
+        C:\Python311\Scripts\pip install -r C:\MyAutomation\requirements.txt  # Replace with your requirements file
 
     - name: Run audioChunkSplitter.py and write output to file
       run: |
-        python ./audio/playAudioFile.py
-        python ./audio/audioVerify.py
+        C:\Python311\python ./audio/playAudioFile.py
+        C:\Python311\python ./audio/audioVerify.py
+      
+
