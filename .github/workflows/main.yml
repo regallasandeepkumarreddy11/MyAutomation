@@ -26,7 +26,7 @@ jobs:
 
     - name: Run audioChunkSplitter.py and write output to file
       run: |
-        C:\Python311\python ./audio/playAudioFile.py
-        C:\Python311\python ./audio/audioVerify.py
+        python ./audio/playAudioFile.py
+        python ./audio/audioVerify.py
       
 
