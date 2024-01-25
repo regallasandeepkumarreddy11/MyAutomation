@@ -53,7 +53,4 @@ if __name__ == "__main__":
     # executor.change_volume(name, volume_change)
     # print(f"Volume decreased by {abs(volume_change)}")
 
-    # name = "H(Realtek(R) Audio)"
-    # percent_result = executor.get_percent()
-    # print(" is the current volume ")
 
