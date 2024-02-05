@@ -28,5 +28,7 @@ jobs:
       run: |
         python ./audio/playAudioFile.py
         python ./audio/audioVerify.py
+        python ./storage/CreateStorageFile.py
+        python ./storage/trasferfile.py
       
 
