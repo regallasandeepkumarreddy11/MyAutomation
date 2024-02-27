@@ -37,7 +37,7 @@ class AudioManager:
 
 if __name__ == "__main__":
     wav_file_path = r"./audio/chunk_1.wav"
-    duration_to_play = 4 # Specify the duration in seconds
+    duration_to_play = 0 # Specify the duration in seconds
 
     if os.path.exists(wav_file_path):
         audio_manager = AudioManager(wav_file_path)
